@@ -2,6 +2,7 @@
     "name": "gbirke/di-patterns",
     "description": "Testing out Factory vs Dependency Injection",
     "require": {
+        "php": ">=7.1",
         "pimple/pimple": "^3.2",
         "php-di/php-di": "^6.0"
     },

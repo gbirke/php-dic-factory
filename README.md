@@ -19,6 +19,7 @@ This is a factory that does not use a DIC and uses internal storage instead.
     - Makes it very clear which objects are shared
     - No dependencies
     - Type violations are shown in the IDE
+    - Easy navigation within the factory / easy to find out how exactly a service is constructed 
 - *Disadvantage:*
     - Lots of repetition
 
@@ -53,3 +54,15 @@ This factory uses the [PHP-DI](http://php-di.org/) library instead of Pimple, ta
     - Factory methods are easy to read
 - *Disadvantages:*
     - Type violations will only be discovered at runtime
+    - IDE complains about unhandled exceptions
+
+### [`PartialPhpDiFactory`](Factories/PhpDiFactory.php)
+Same as `PhpDiFactory` but only using the DIC for auto wiring and shared services.
+
+- *Advantages:*
+    - Fewer creation functions needed
+    - Type hinting in the IDE for the `get` method of the container.
+    - Factory methods are easy to read
+- *Disadvantages:*
+    - Type violations will only be discovered at runtime
+    - IDE complains about unhandled exceptions
