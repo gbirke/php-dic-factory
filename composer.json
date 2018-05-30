@@ -1,0 +1,18 @@
+{
+    "name": "gbirke/di-patterns",
+    "description": "Testing out Factory vs Dependency Injection",
+    "require": {
+        "pimple/pimple": "^3.2",
+        "php-di/php-di": "^6.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gabriel Birke",
+            "email": "gabriel.birke@wikimedia.de"
+        }
+    ],
+    "autoload": {
+        "classmap": [ "Factories", "Services" ]
+    }
+}
