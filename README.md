@@ -43,6 +43,7 @@ This factory uses Pimple like in the examples of the Pimple documentation, where
 - *Disadvantages:*
     - Type violations will only be discovered at runtime
     - Introduction of string IDs could create subtle errors when you have typos.
+    - No detection of unused service construction (dead code)
 
 ### [`PhpDiFactory`](Factories/PhpDiFactory.php)
 This factory uses the [PHP-DI](http://php-di.org/) library instead of Pimple, taking advantage of its "autowiring" capacities, where only configurable classes need a creation function.
@@ -55,6 +56,7 @@ This factory uses the [PHP-DI](http://php-di.org/) library instead of Pimple, ta
 - *Disadvantages:*
     - Type violations will only be discovered at runtime
     - IDE complains about unhandled exceptions
+    - No detection of unused service construction (dead code)
 
 ### [`PartialPhpDiFactory`](Factories/PhpDiFactory.php)
 Same as `PhpDiFactory` but only using the DIC for auto wiring and shared services.
@@ -66,3 +68,4 @@ Same as `PhpDiFactory` but only using the DIC for auto wiring and shared service
 - *Disadvantages:*
     - Type violations will only be discovered at runtime
     - IDE complains about unhandled exceptions
+    - No detection of unused service construction (dead code)
